@@ -1,4 +1,4 @@
-"""Trusted passing reference for an explicitly synthetic course."""
+"""Synthetic demo submission: demo-be-erin; not a real account."""
 def balance(events):
     seen = {}
     total = 0
