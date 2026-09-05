@@ -1,4 +1,4 @@
-"""Trusted passing reference for an explicitly synthetic course."""
+"""Synthetic demo submission: demo-be-casey; not a real account."""
 def normalize_listing(record):
     title = record.get("title", "").strip()
     if not title:
