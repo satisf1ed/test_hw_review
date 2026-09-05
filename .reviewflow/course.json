@@ -1,0 +1,207 @@
+{
+  "course": "Backend Engineering: Reliable Python Services",
+  "demo": true,
+  "roster": [
+    "demo-be-alex",
+    "demo-be-blair",
+    "demo-be-casey",
+    "demo-be-drew",
+    "demo-be-erin"
+  ],
+  "homeworks": [
+    {
+      "id": 1,
+      "title": "Listing validation at the API boundary",
+      "assignment": "# HW 1: Listing validation at the API boundary\n\nImplement normalize_listing(record). Return a new dict containing title (trimmed), price_cents (unchanged nonnegative int, never bool), and currency (uppercase; default RUB). A blank title, invalid price, or currency outside RUB/USD/EUR raises ValueError. Do not mutate input; ignore unrelated fields.\n\nUse Python 3 standard library only. Edit solution.py; do not change the trusted tests. Run python -m unittest discover -s tests -v in the offline sandbox. Add a short SUBMISSION.md describing the implementation and limitations. The base contains a passing reference implementation for this explicitly synthetic course.\n\n## Rubric (10 points; reviewer decides)\n\n- Canonical listing fields and currency (4): 4: all core requirements hold; 2: main path works with gaps; 0: core behavior absent or incorrect.\n- Reject malformed prices and empty titles (4): 4: boundary and invalid-input requirements hold; 2: some cases handled; 0: no reliable handling. Cite concrete cases.\n- Readable implementation and evidence (2): 2: concise, reproducible explanation with limitations; 1: partial explanation; 0: absent or misleading. Test counts are evidence, not a grade.\n\nSubmission deadline (simulated): 2026-08-07T18:00:00Z\nReview deadline (simulated): 2026-08-10T18:00:00.000Z\n",
+      "submissionDeadline": "2026-08-07T18:00:00Z",
+      "reviewDeadline": "2026-08-10T18:00:00.000Z",
+      "executionProfile": "python-unittest",
+      "criteria": [
+        {
+          "id": "core",
+          "title": "Canonical listing fields and currency",
+          "description": "4: all core requirements hold; 2: main path works with gaps; 0: core behavior absent or incorrect.",
+          "maxScore": 4
+        },
+        {
+          "id": "edges",
+          "title": "Reject malformed prices and empty titles",
+          "description": "4: boundary and invalid-input requirements hold; 2: some cases handled; 0: no reliable handling. Cite concrete cases.",
+          "maxScore": 4
+        },
+        {
+          "id": "reasoning",
+          "title": "Readable implementation and evidence",
+          "description": "2: concise, reproducible explanation with limitations; 1: partial explanation; 0: absent or misleading. Test counts are evidence, not a grade.",
+          "maxScore": 2
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Stable pagination for a listing feed",
+      "assignment": "# HW 2: Stable pagination for a listing feed\n\nImplement paginate(items, page, page_size). Pages are 1-indexed; return a new list in original order without mutating items. Both numeric arguments must be ints, not bool; page >= 1 and 1 <= page_size <= 50, otherwise ValueError. Empty and out-of-range pages return [].\n\nUse Python 3 standard library only. Edit solution.py; do not change the trusted tests. Run python -m unittest discover -s tests -v in the offline sandbox. Add a short SUBMISSION.md describing the implementation and limitations. The base contains a passing reference implementation for this explicitly synthetic course.\n\n## Rubric (10 points; reviewer decides)\n\n- Stable 1-indexed slicing without mutation (4): 4: all core requirements hold; 2: main path works with gaps; 0: core behavior absent or incorrect.\n- Validate bounds and cap response size (4): 4: boundary and invalid-input requirements hold; 2: some cases handled; 0: no reliable handling. Cite concrete cases.\n- Readable implementation and evidence (2): 2: concise, reproducible explanation with limitations; 1: partial explanation; 0: absent or misleading. Test counts are evidence, not a grade.\n\nSubmission deadline (simulated): 2026-08-14T18:00:00Z\nReview deadline (simulated): 2026-08-17T18:00:00.000Z\n",
+      "submissionDeadline": "2026-08-14T18:00:00Z",
+      "reviewDeadline": "2026-08-17T18:00:00.000Z",
+      "executionProfile": "python-unittest",
+      "criteria": [
+        {
+          "id": "core",
+          "title": "Stable 1-indexed slicing without mutation",
+          "description": "4: all core requirements hold; 2: main path works with gaps; 0: core behavior absent or incorrect.",
+          "maxScore": 4
+        },
+        {
+          "id": "edges",
+          "title": "Validate bounds and cap response size",
+          "description": "4: boundary and invalid-input requirements hold; 2: some cases handled; 0: no reliable handling. Cite concrete cases.",
+          "maxScore": 4
+        },
+        {
+          "id": "reasoning",
+          "title": "Readable implementation and evidence",
+          "description": "2: concise, reproducible explanation with limitations; 1: partial explanation; 0: absent or misleading. Test counts are evidence, not a grade.",
+          "maxScore": 2
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Idempotent payment-event aggregation",
+      "assignment": "# HW 3: Idempotent payment-event aggregation\n\nImplement balance(events) for dictionaries with id (nonempty string) and amount (integer cents, not bool). Sum positive charges and negative refunds. Ignore repeated ids with the same amount. Conflicting repeated ids or invalid amounts raise ValueError. Do not mutate events; an empty stream totals zero.\n\nUse Python 3 standard library only. Edit solution.py; do not change the trusted tests. Run python -m unittest discover -s tests -v in the offline sandbox. Add a short SUBMISSION.md describing the implementation and limitations. The base contains a passing reference implementation for this explicitly synthetic course.\n\n## Rubric (10 points; reviewer decides)\n\n- Signed cents and idempotent replay (4): 4: all core requirements hold; 2: main path works with gaps; 0: core behavior absent or incorrect.\n- Detect conflicting events and invalid amounts (4): 4: boundary and invalid-input requirements hold; 2: some cases handled; 0: no reliable handling. Cite concrete cases.\n- Readable implementation and evidence (2): 2: concise, reproducible explanation with limitations; 1: partial explanation; 0: absent or misleading. Test counts are evidence, not a grade.\n\nSubmission deadline (simulated): 2026-08-21T18:00:00Z\nReview deadline (simulated): 2026-08-24T18:00:00.000Z\n",
+      "submissionDeadline": "2026-08-21T18:00:00Z",
+      "reviewDeadline": "2026-08-24T18:00:00.000Z",
+      "executionProfile": "python-unittest",
+      "criteria": [
+        {
+          "id": "core",
+          "title": "Signed cents and idempotent replay",
+          "description": "4: all core requirements hold; 2: main path works with gaps; 0: core behavior absent or incorrect.",
+          "maxScore": 4
+        },
+        {
+          "id": "edges",
+          "title": "Detect conflicting events and invalid amounts",
+          "description": "4: boundary and invalid-input requirements hold; 2: some cases handled; 0: no reliable handling. Cite concrete cases.",
+          "maxScore": 4
+        },
+        {
+          "id": "reasoning",
+          "title": "Readable implementation and evidence",
+          "description": "2: concise, reproducible explanation with limitations; 1: partial explanation; 0: absent or misleading. Test counts are evidence, not a grade.",
+          "maxScore": 2
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "TTL cache snapshot semantics",
+      "assignment": "# HW 4: TTL cache snapshot semantics\n\nImplement visible_entries(entries, now). Input maps keys to (value, expires_at) pairs using numeric timestamps or None for no expiry. Return a new key-to-value dict containing entries whose expiry is strictly greater than now or None. Preserve falsy values and input data. Expiry exactly at now is already expired.\n\nUse Python 3 standard library only. Edit solution.py; do not change the trusted tests. Run python -m unittest discover -s tests -v in the offline sandbox. Add a short SUBMISSION.md describing the implementation and limitations. The base contains a passing reference implementation for this explicitly synthetic course.\n\n## Rubric (10 points; reviewer decides)\n\n- Correct cache boundary and permanent entries (4): 4: all core requirements hold; 2: main path works with gaps; 0: core behavior absent or incorrect.\n- Preserve falsy values and input snapshot (4): 4: boundary and invalid-input requirements hold; 2: some cases handled; 0: no reliable handling. Cite concrete cases.\n- Readable implementation and evidence (2): 2: concise, reproducible explanation with limitations; 1: partial explanation; 0: absent or misleading. Test counts are evidence, not a grade.\n\nSubmission deadline (simulated): 2026-08-28T18:00:00Z\nReview deadline (simulated): 2026-08-31T18:00:00.000Z\n",
+      "submissionDeadline": "2026-08-28T18:00:00Z",
+      "reviewDeadline": "2026-08-31T18:00:00.000Z",
+      "executionProfile": "python-unittest",
+      "criteria": [
+        {
+          "id": "core",
+          "title": "Correct cache boundary and permanent entries",
+          "description": "4: all core requirements hold; 2: main path works with gaps; 0: core behavior absent or incorrect.",
+          "maxScore": 4
+        },
+        {
+          "id": "edges",
+          "title": "Preserve falsy values and input snapshot",
+          "description": "4: boundary and invalid-input requirements hold; 2: some cases handled; 0: no reliable handling. Cite concrete cases.",
+          "maxScore": 4
+        },
+        {
+          "id": "reasoning",
+          "title": "Readable implementation and evidence",
+          "description": "2: concise, reproducible explanation with limitations; 1: partial explanation; 0: absent or misleading. Test counts are evidence, not a grade.",
+          "maxScore": 2
+        }
+      ]
+    }
+  ],
+  "demoSubmissions": {
+    "solutions/hw_1/alex": {
+      "studentGithub": "demo-be-alex",
+      "submittedAt": "2026-08-06T18:00:00.000Z"
+    },
+    "solutions/hw_1/blair": {
+      "studentGithub": "demo-be-blair",
+      "submittedAt": "2026-08-07T10:00:00.000Z"
+    },
+    "solutions/hw_1/casey": {
+      "studentGithub": "demo-be-casey",
+      "submittedAt": "2026-08-07T16:00:00.000Z"
+    },
+    "solutions/hw_1/drew": {
+      "studentGithub": "demo-be-drew",
+      "submittedAt": "2026-08-07T12:00:00.000Z"
+    },
+    "solutions/hw_1/erin": {
+      "studentGithub": "demo-be-erin",
+      "submittedAt": "2026-08-09T00:00:00.000Z"
+    },
+    "solutions/hw_2/alex": {
+      "studentGithub": "demo-be-alex",
+      "submittedAt": "2026-08-13T22:00:00.000Z"
+    },
+    "solutions/hw_2/blair": {
+      "studentGithub": "demo-be-blair",
+      "submittedAt": "2026-08-14T08:00:00.000Z"
+    },
+    "solutions/hw_2/casey": {
+      "studentGithub": "demo-be-casey",
+      "submittedAt": "2026-08-14T16:00:00.000Z"
+    },
+    "solutions/hw_2/drew": {
+      "studentGithub": "demo-be-drew",
+      "submittedAt": "2026-08-15T02:00:00.000Z"
+    },
+    "solutions/hw_2/erin": {
+      "studentGithub": "demo-be-erin",
+      "submittedAt": "2026-08-16T18:00:00.000Z"
+    },
+    "solutions/hw_3/alex": {
+      "studentGithub": "demo-be-alex",
+      "submittedAt": "2026-08-21T02:00:00.000Z"
+    },
+    "solutions/hw_3/blair": {
+      "studentGithub": "demo-be-blair",
+      "submittedAt": "2026-08-21T10:00:00.000Z"
+    },
+    "solutions/hw_3/casey": {
+      "studentGithub": "demo-be-casey",
+      "submittedAt": "2026-08-21T17:00:00.000Z"
+    },
+    "solutions/hw_3/drew": {
+      "studentGithub": "demo-be-drew",
+      "submittedAt": "2026-08-21T14:00:00.000Z"
+    },
+    "solutions/hw_3/erin": {
+      "studentGithub": "demo-be-erin",
+      "submittedAt": "2026-08-22T06:00:00.000Z"
+    },
+    "solutions/hw_4/alex": {
+      "studentGithub": "demo-be-alex",
+      "submittedAt": "2026-08-28T06:00:00.000Z"
+    },
+    "solutions/hw_4/blair": {
+      "studentGithub": "demo-be-blair",
+      "submittedAt": "2026-08-28T08:00:00.000Z"
+    },
+    "solutions/hw_4/casey": {
+      "studentGithub": "demo-be-casey",
+      "submittedAt": "2026-08-28T17:00:00.000Z"
+    },
+    "solutions/hw_4/drew": {
+      "studentGithub": "demo-be-drew",
+      "submittedAt": "2026-08-28T06:00:00.000Z"
+    },
+    "solutions/hw_4/erin": {
+      "studentGithub": "demo-be-erin",
+      "submittedAt": "2026-08-29T00:00:00.000Z"
+    }
+  }
+}

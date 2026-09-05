@@ -1,89 +1,35 @@
-# ДЗ 2. Модерация объявлений: сервис на FastAPI
+# Backend Engineering: Reliable Python Services
 
-**Курс:** Основы backend-разработки
-**Максимальный балл:** 10
-**Срок сдачи:** 14 октября. Досдача в течение 1 дня — минус 1 балл; позже работы не принимаются и оцениваются в 0 баллов.
+> SYNTHETIC DEMO ONLY. Five aliases represent generated student profiles, not real GitHub accounts. August 2026 submission dates are simulated; actual commit and PR creation timestamps are not backdated.
 
-## Что нужно сделать
+## Branch policy
 
-Реализовать сервис на Python с использованием фреймворка FastAPI, который решает,
-нужно ли отправлять объявление на ручную модерацию.
+- main contains course policy and the trusted .reviewflow/course.json manifest. Do not submit homework into main.
+- hw_1, hw_2, hw_3, hw_4 are independent assignment roots with requirements, rubrics, passing reference code, and trusted Python unittest tests. They are not cumulative homework merges.
+- Submit solutions/hw_N/<slug> into hw_N. Do not merge or close demo PRs during a walkthrough.
+- The roster and demoSubmissions mapping on main are the authority for synthetic identity and submittedAt. GitHub authors remain the actual App bot; no account impersonation is intended.
+- Run Python only in the offline, resource-limited Docker runner. Do not install dependencies or execute attachments. Tests are evidence, not grades.
+- Grade decisions and any simulated reviewer confirmations must be produced separately and explicitly marked as demo. This manifest contains no grades.
 
-Обработчик: `POST /moderate`
+## Assignments
 
-На вход обработчик принимает JSON со следующими полями:
+- [HW 1: Listing validation at the API boundary](../../tree/hw_1) | submission 2026-08-07T18:00:00Z | review 2026-08-10T18:00:00.000Z
+- [HW 2: Stable pagination for a listing feed](../../tree/hw_2) | submission 2026-08-14T18:00:00Z | review 2026-08-17T18:00:00.000Z
+- [HW 3: Idempotent payment-event aggregation](../../tree/hw_3) | submission 2026-08-21T18:00:00Z | review 2026-08-24T18:00:00.000Z
+- [HW 4: TTL cache snapshot semantics](../../tree/hw_4) | submission 2026-08-28T18:00:00Z | review 2026-08-31T18:00:00.000Z
 
-- `ad_id: int`
-- `seller_id: int`
-- `is_trusted_seller: bool`
-- `title: str`
-- `text: str`
-- `price: int`
-- `photos_count: int`
+## Synthetic roster
 
-На выход обработчик возвращает JSON с двумя полями:
+- demo-be-alex: improving progression fixture.
+- demo-be-blair: steady progression fixture.
+- demo-be-casey: regressing progression fixture.
+- demo-be-drew: recovering progression fixture.
+- demo-be-erin: late progression fixture.
 
-- `needs_review: bool` — нужна ли ручная модерация
-- `reason: str` — краткое объяснение решения
+## Preserved original homework
 
-## Логика модерации
+[Immutable original tree](https://github.com/satisf1ed/test_hw_review/tree/2cdd72a36908e099379cee4845850301cb0c4109) at 2cdd72a36908e099379cee4845850301cb0c4109.
+The original README is also preserved byte-for-byte in [.reviewflow/legacy/README.md](.reviewflow/legacy/README.md).
+Existing solution/* branches and PRs are retained, not migrated, merged, deleted, or rewritten. They are legacy examples, outside the new solutions/hw_N/ namespace.
 
-Реализуем наивные правила, без модели:
-
-1. Если продавец доверенный (`is_trusted_seller = true`) — модерация не нужна.
-2. Иначе модерация нужна, если выполнено хотя бы одно условие:
-   - фотографий нет (`photos_count = 0`);
-   - цена меньше 100 или больше 10 000 000;
-   - в заголовке или тексте встречается слово из стоп-листа: `даром`, `срочно куплю`, `телеграм`.
-3. В остальных случаях модерация не нужна.
-
-## Формат выполнения
-
-1. Создайте ветку в этом репозитории и оформите решение пул-реквестом.
-2. Проект должен запускаться локально командой `fastapi dev`.
-3. Зависимости перечислите в `requirements.txt`.
-4. Тесты положите в каталог `tests/`, запуск — `pytest`.
-
-## Работа с ИИ-инструментами
-
-Использование ИИ-инструментов допускается, но **необоснованное** использование
-считается нарушением. Если вы применяли ИИ, укажите это в описании пул-реквеста и
-опишите, как именно. Балл за необоснованное использование снижается.
-
-## Критерии оценки
-
-Работа оценивается по шести критериям, максимум 10 баллов.
-
-### 1. Корректный обработчик: соответствие заданному API (0–2 балла)
-
-- **0 баллов** — обработчик не соответствует заданному API
-- **1 балл** — обработчик соответствует заданному API
-- **2 балла** — обработчик соответствует заданному API и возвращает заданную структуру ответа
-
-### 2. Правильная логика модерации по описанным правилам (0–2 балла)
-
-- **0 баллов** — логика не соответствует описанной в задании
-- **1 балл** — логика частично соответствует описанной, часть правил не реализована
-- **2 балла** — логика полностью соответствует описанной в задании
-
-### 3. Предсказуемые статусы (0–1 балл)
-
-- **0 баллов** — при ошибках возвращается 500 или пустой ответ
-- **1 балл** — сервис возвращает 200 при успехе и клиентскую ошибку при невалидных данных
-
-### 4. Локальный запуск без ошибок (0–1 балл)
-
-- **0 баллов** — проект не запускается или требует ручных доработок
-- **1 балл** — проект разворачивается и запускается локально без ошибок через `fastapi dev`
-
-### 5. Соответствие принципам чистой архитектуры (0–1 балл)
-
-- **0 баллов** — код монолитный, бизнес-логика смешана с роутами
-- **1 балл** — выделены уровни роутов и бизнес-логики
-
-### 6. Тесты (0–3 балла)
-
-- **0 баллов** — тесты отсутствуют
-- **1 балл** — есть тесты на позитивные и негативные сценарии, но нет обработки corner-cases
-- **2 балла** — тесты покрывают все возможные corner-cases
-- **3 балла** — в тестах используется параметризация для проверки corner-cases, чтобы уменьшить дублирование кода
+Fixture marker: reviewflow-synthetic-courses-v1.
