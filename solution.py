@@ -1,4 +1,4 @@
-"""Trusted passing reference for an explicitly synthetic course."""
+"""Synthetic demo submission: demo-be-drew; not a real account."""
 def balance(events):
     seen = {}
     total = 0
@@ -11,6 +11,7 @@ def balance(events):
         if key in seen:
             if seen[key] != amount:
                 raise ValueError("conflicting duplicate")
+            total += amount
             continue
         seen[key] = amount
         total += amount
