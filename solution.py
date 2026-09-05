@@ -1,4 +1,4 @@
-"""Trusted passing reference for an explicitly synthetic course."""
+"""Synthetic demo submission: demo-be-alex; not a real account."""
 def visible_entries(entries, now):
     result = {}
     for key, (value, expires) in entries.items():
