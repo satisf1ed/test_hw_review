@@ -1,19 +1,18 @@
-# HW 1: Listing validation at the API boundary
+# ДЗ 1: Валидация объявлений на границе API
 
-Implement normalize_listing(record). Return a new dict containing title (trimmed), price_cents (unchanged nonnegative int, never bool), and currency (uppercase; default RUB). A blank title, invalid price, or currency outside RUB/USD/EUR raises ValueError. Do not mutate input; ignore unrelated fields.
+Реализуйте normalize_listing(record). Верните новый словарь с полями title (без пробелов по краям), price_cents (исходное неотрицательное значение типа int, но не bool) и currency (в верхнем регистре; по умолчанию RUB). Пустой заголовок, некорректная цена или валюта вне RUB/USD/EUR должны приводить к ValueError. Не изменяйте входные данные; игнорируйте посторонние поля.
 
-Use Python 3 standard library only. Edit solution.py; do not change the trusted tests. Run python -m unittest discover -s tests -v in the offline sandbox. Add a short SUBMISSION.md describing the implementation and limitations. The base contains a passing reference implementation for this explicitly synthetic course.
+Используйте только стандартную библиотеку Python 3. Изменяйте solution.py; не изменяйте доверенные тесты. Запускайте python -m unittest discover -s tests -v в изолированной среде без доступа к сети. Добавьте краткий SUBMISSION.md с описанием реализации и ограничений. Базовая ветка содержит эталонную реализацию, проходящую тесты.
 
-## Rubric (10 points; reviewer decides)
+## Критерии (10 баллов; оценку выставляет проверяющий)
 
-- Canonical listing fields and currency (4): 4: all core requirements hold; 2: main path works with gaps; 0: core behavior absent or incorrect.
-- Reject malformed prices and empty titles (4): 4: boundary and invalid-input requirements hold; 2: some cases handled; 0: no reliable handling. Cite concrete cases.
-- Readable implementation and evidence (2): 2: concise, reproducible explanation with limitations; 1: partial explanation; 0: absent or misleading. Test counts are evidence, not a grade.
+- Нормализация полей объявления и валюты (4): 4: выполнены все основные требования; 2: основной сценарий работает с недочётами; 0: основное поведение отсутствует или некорректно.
+- Отклонение некорректных цен и пустых заголовков (4): 4: выполнены требования к граничным случаям и некорректным входным данным; 2: обработана часть случаев; 0: надёжная обработка отсутствует. Приведите конкретные примеры.
+- Читаемая реализация и обоснование (2): 2: краткое, воспроизводимое объяснение с указанием ограничений; 1: частичное объяснение; 0: объяснение отсутствует или вводит в заблуждение. Число пройденных тестов служит свидетельством, а не оценкой.
 
-Submission deadline (simulated): 2026-08-07T18:00:00Z
-Review deadline (simulated): 2026-08-10T18:00:00.000Z
+Срок сдачи: 2026-08-07T18:00:00Z
+Срок проверки: 2026-08-10T18:00:00.000Z
 
-## Synthetic course
+## Сдача решения
 
-reviewflow-synthetic-courses-v1. All identities and submission dates are simulations, not real students.
-Submit solutions/hw_1/<slug> into hw_1, never main.
+Отправляйте solutions/hw_1/<slug> в hw_1, а не в main. Правила курса и техническая история находятся в main/.reviewflow/course.json и main/.reviewflow/provenance.json.
