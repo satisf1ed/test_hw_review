@@ -1,4 +1,4 @@
-"""Trusted passing reference for an explicitly synthetic course."""
+"""Synthetic demo submission: demo-be-blair; not a real account."""
 def paginate(items, page, page_size):
     if type(page) is not int or page < 1:
         raise ValueError("page must be a positive integer")
