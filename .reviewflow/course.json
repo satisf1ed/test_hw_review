@@ -1,5 +1,5 @@
 {
-  "course": "Backend Engineering: Reliable Python Services",
+  "course": "Бэкенд-разработка: надёжные сервисы на Python",
   "demo": true,
   "roster": [
     "demo-be-alex",
@@ -11,112 +11,112 @@
   "homeworks": [
     {
       "id": 1,
-      "title": "Listing validation at the API boundary",
-      "assignment": "# HW 1: Listing validation at the API boundary\n\nImplement normalize_listing(record). Return a new dict containing title (trimmed), price_cents (unchanged nonnegative int, never bool), and currency (uppercase; default RUB). A blank title, invalid price, or currency outside RUB/USD/EUR raises ValueError. Do not mutate input; ignore unrelated fields.\n\nUse Python 3 standard library only. Edit solution.py; do not change the trusted tests. Run python -m unittest discover -s tests -v in the offline sandbox. Add a short SUBMISSION.md describing the implementation and limitations. The base contains a passing reference implementation for this explicitly synthetic course.\n\n## Rubric (10 points; reviewer decides)\n\n- Canonical listing fields and currency (4): 4: all core requirements hold; 2: main path works with gaps; 0: core behavior absent or incorrect.\n- Reject malformed prices and empty titles (4): 4: boundary and invalid-input requirements hold; 2: some cases handled; 0: no reliable handling. Cite concrete cases.\n- Readable implementation and evidence (2): 2: concise, reproducible explanation with limitations; 1: partial explanation; 0: absent or misleading. Test counts are evidence, not a grade.\n\nSubmission deadline (simulated): 2026-08-07T18:00:00Z\nReview deadline (simulated): 2026-08-10T18:00:00.000Z\n",
+      "title": "Валидация объявлений на границе API",
+      "assignment": "# ДЗ 1: Валидация объявлений на границе API\n\nРеализуйте normalize_listing(record). Верните новый словарь с полями title (без пробелов по краям), price_cents (исходное неотрицательное значение типа int, но не bool) и currency (в верхнем регистре; по умолчанию RUB). Пустой заголовок, некорректная цена или валюта вне RUB/USD/EUR должны приводить к ValueError. Не изменяйте входные данные; игнорируйте посторонние поля.\n\nИспользуйте только стандартную библиотеку Python 3. Изменяйте solution.py; не изменяйте доверенные тесты. Запускайте python -m unittest discover -s tests -v в изолированной среде без доступа к сети. Добавьте краткий SUBMISSION.md с описанием реализации и ограничений. Базовая ветка содержит эталонную реализацию, проходящую тесты.\n\n## Критерии (10 баллов; оценку выставляет проверяющий)\n\n- Нормализация полей объявления и валюты (4): 4: выполнены все основные требования; 2: основной сценарий работает с недочётами; 0: основное поведение отсутствует или некорректно.\n- Отклонение некорректных цен и пустых заголовков (4): 4: выполнены требования к граничным случаям и некорректным входным данным; 2: обработана часть случаев; 0: надёжная обработка отсутствует. Приведите конкретные примеры.\n- Читаемая реализация и обоснование (2): 2: краткое, воспроизводимое объяснение с указанием ограничений; 1: частичное объяснение; 0: объяснение отсутствует или вводит в заблуждение. Число пройденных тестов служит свидетельством, а не оценкой.\n\nСрок сдачи: 2026-08-07T18:00:00Z\nСрок проверки: 2026-08-10T18:00:00.000Z\n",
       "submissionDeadline": "2026-08-07T18:00:00Z",
       "reviewDeadline": "2026-08-10T18:00:00.000Z",
       "executionProfile": "python-unittest",
       "criteria": [
         {
           "id": "core",
-          "title": "Canonical listing fields and currency",
-          "description": "4: all core requirements hold; 2: main path works with gaps; 0: core behavior absent or incorrect.",
+          "title": "Нормализация полей объявления и валюты",
+          "description": "4: выполнены все основные требования; 2: основной сценарий работает с недочётами; 0: основное поведение отсутствует или некорректно.",
           "maxScore": 4
         },
         {
           "id": "edges",
-          "title": "Reject malformed prices and empty titles",
-          "description": "4: boundary and invalid-input requirements hold; 2: some cases handled; 0: no reliable handling. Cite concrete cases.",
+          "title": "Отклонение некорректных цен и пустых заголовков",
+          "description": "4: выполнены требования к граничным случаям и некорректным входным данным; 2: обработана часть случаев; 0: надёжная обработка отсутствует. Приведите конкретные примеры.",
           "maxScore": 4
         },
         {
           "id": "reasoning",
-          "title": "Readable implementation and evidence",
-          "description": "2: concise, reproducible explanation with limitations; 1: partial explanation; 0: absent or misleading. Test counts are evidence, not a grade.",
+          "title": "Читаемая реализация и обоснование",
+          "description": "2: краткое, воспроизводимое объяснение с указанием ограничений; 1: частичное объяснение; 0: объяснение отсутствует или вводит в заблуждение. Число пройденных тестов служит свидетельством, а не оценкой.",
           "maxScore": 2
         }
       ]
     },
     {
       "id": 2,
-      "title": "Stable pagination for a listing feed",
-      "assignment": "# HW 2: Stable pagination for a listing feed\n\nImplement paginate(items, page, page_size). Pages are 1-indexed; return a new list in original order without mutating items. Both numeric arguments must be ints, not bool; page >= 1 and 1 <= page_size <= 50, otherwise ValueError. Empty and out-of-range pages return [].\n\nUse Python 3 standard library only. Edit solution.py; do not change the trusted tests. Run python -m unittest discover -s tests -v in the offline sandbox. Add a short SUBMISSION.md describing the implementation and limitations. The base contains a passing reference implementation for this explicitly synthetic course.\n\n## Rubric (10 points; reviewer decides)\n\n- Stable 1-indexed slicing without mutation (4): 4: all core requirements hold; 2: main path works with gaps; 0: core behavior absent or incorrect.\n- Validate bounds and cap response size (4): 4: boundary and invalid-input requirements hold; 2: some cases handled; 0: no reliable handling. Cite concrete cases.\n- Readable implementation and evidence (2): 2: concise, reproducible explanation with limitations; 1: partial explanation; 0: absent or misleading. Test counts are evidence, not a grade.\n\nSubmission deadline (simulated): 2026-08-14T18:00:00Z\nReview deadline (simulated): 2026-08-17T18:00:00.000Z\n",
+      "title": "Стабильная пагинация ленты объявлений",
+      "assignment": "# ДЗ 2: Стабильная пагинация ленты объявлений\n\nРеализуйте paginate(items, page, page_size). Нумерация страниц начинается с 1; верните новый список в исходном порядке, не изменяя items. Оба числовых аргумента должны иметь тип int, но не bool; требуется page >= 1 и 1 <= page_size <= 50, иначе ValueError. Для пустых страниц и страниц за пределами списка верните [].\n\nИспользуйте только стандартную библиотеку Python 3. Изменяйте solution.py; не изменяйте доверенные тесты. Запускайте python -m unittest discover -s tests -v в изолированной среде без доступа к сети. Добавьте краткий SUBMISSION.md с описанием реализации и ограничений. Базовая ветка содержит эталонную реализацию, проходящую тесты.\n\n## Критерии (10 баллов; оценку выставляет проверяющий)\n\n- Стабильный срез с нумерацией от 1 без изменения входных данных (4): 4: выполнены все основные требования; 2: основной сценарий работает с недочётами; 0: основное поведение отсутствует или некорректно.\n- Проверка границ и ограничение размера ответа (4): 4: выполнены требования к граничным случаям и некорректным входным данным; 2: обработана часть случаев; 0: надёжная обработка отсутствует. Приведите конкретные примеры.\n- Читаемая реализация и обоснование (2): 2: краткое, воспроизводимое объяснение с указанием ограничений; 1: частичное объяснение; 0: объяснение отсутствует или вводит в заблуждение. Число пройденных тестов служит свидетельством, а не оценкой.\n\nСрок сдачи: 2026-08-14T18:00:00Z\nСрок проверки: 2026-08-17T18:00:00.000Z\n",
       "submissionDeadline": "2026-08-14T18:00:00Z",
       "reviewDeadline": "2026-08-17T18:00:00.000Z",
       "executionProfile": "python-unittest",
       "criteria": [
         {
           "id": "core",
-          "title": "Stable 1-indexed slicing without mutation",
-          "description": "4: all core requirements hold; 2: main path works with gaps; 0: core behavior absent or incorrect.",
+          "title": "Стабильный срез с нумерацией от 1 без изменения входных данных",
+          "description": "4: выполнены все основные требования; 2: основной сценарий работает с недочётами; 0: основное поведение отсутствует или некорректно.",
           "maxScore": 4
         },
         {
           "id": "edges",
-          "title": "Validate bounds and cap response size",
-          "description": "4: boundary and invalid-input requirements hold; 2: some cases handled; 0: no reliable handling. Cite concrete cases.",
+          "title": "Проверка границ и ограничение размера ответа",
+          "description": "4: выполнены требования к граничным случаям и некорректным входным данным; 2: обработана часть случаев; 0: надёжная обработка отсутствует. Приведите конкретные примеры.",
           "maxScore": 4
         },
         {
           "id": "reasoning",
-          "title": "Readable implementation and evidence",
-          "description": "2: concise, reproducible explanation with limitations; 1: partial explanation; 0: absent or misleading. Test counts are evidence, not a grade.",
+          "title": "Читаемая реализация и обоснование",
+          "description": "2: краткое, воспроизводимое объяснение с указанием ограничений; 1: частичное объяснение; 0: объяснение отсутствует или вводит в заблуждение. Число пройденных тестов служит свидетельством, а не оценкой.",
           "maxScore": 2
         }
       ]
     },
     {
       "id": 3,
-      "title": "Idempotent payment-event aggregation",
-      "assignment": "# HW 3: Idempotent payment-event aggregation\n\nImplement balance(events) for dictionaries with id (nonempty string) and amount (integer cents, not bool). Sum positive charges and negative refunds. Ignore repeated ids with the same amount. Conflicting repeated ids or invalid amounts raise ValueError. Do not mutate events; an empty stream totals zero.\n\nUse Python 3 standard library only. Edit solution.py; do not change the trusted tests. Run python -m unittest discover -s tests -v in the offline sandbox. Add a short SUBMISSION.md describing the implementation and limitations. The base contains a passing reference implementation for this explicitly synthetic course.\n\n## Rubric (10 points; reviewer decides)\n\n- Signed cents and idempotent replay (4): 4: all core requirements hold; 2: main path works with gaps; 0: core behavior absent or incorrect.\n- Detect conflicting events and invalid amounts (4): 4: boundary and invalid-input requirements hold; 2: some cases handled; 0: no reliable handling. Cite concrete cases.\n- Readable implementation and evidence (2): 2: concise, reproducible explanation with limitations; 1: partial explanation; 0: absent or misleading. Test counts are evidence, not a grade.\n\nSubmission deadline (simulated): 2026-08-21T18:00:00Z\nReview deadline (simulated): 2026-08-24T18:00:00.000Z\n",
+      "title": "Идемпотентная агрегация платёжных событий",
+      "assignment": "# ДЗ 3: Идемпотентная агрегация платёжных событий\n\nРеализуйте balance(events) для словарей с полями id (непустая строка) и amount (целое число в сотых долях денежной единицы, но не bool). Суммируйте положительные начисления и отрицательные возвраты. Игнорируйте повторные id с той же суммой. Повторный id с другой суммой или некорректная сумма должны приводить к ValueError. Не изменяйте events; сумма пустого потока равна нулю.\n\nИспользуйте только стандартную библиотеку Python 3. Изменяйте solution.py; не изменяйте доверенные тесты. Запускайте python -m unittest discover -s tests -v в изолированной среде без доступа к сети. Добавьте краткий SUBMISSION.md с описанием реализации и ограничений. Базовая ветка содержит эталонную реализацию, проходящую тесты.\n\n## Критерии (10 баллов; оценку выставляет проверяющий)\n\n- Денежные суммы со знаком и идемпотентная повторная обработка (4): 4: выполнены все основные требования; 2: основной сценарий работает с недочётами; 0: основное поведение отсутствует или некорректно.\n- Обнаружение конфликтующих событий и некорректных сумм (4): 4: выполнены требования к граничным случаям и некорректным входным данным; 2: обработана часть случаев; 0: надёжная обработка отсутствует. Приведите конкретные примеры.\n- Читаемая реализация и обоснование (2): 2: краткое, воспроизводимое объяснение с указанием ограничений; 1: частичное объяснение; 0: объяснение отсутствует или вводит в заблуждение. Число пройденных тестов служит свидетельством, а не оценкой.\n\nСрок сдачи: 2026-08-21T18:00:00Z\nСрок проверки: 2026-08-24T18:00:00.000Z\n",
       "submissionDeadline": "2026-08-21T18:00:00Z",
       "reviewDeadline": "2026-08-24T18:00:00.000Z",
       "executionProfile": "python-unittest",
       "criteria": [
         {
           "id": "core",
-          "title": "Signed cents and idempotent replay",
-          "description": "4: all core requirements hold; 2: main path works with gaps; 0: core behavior absent or incorrect.",
+          "title": "Денежные суммы со знаком и идемпотентная повторная обработка",
+          "description": "4: выполнены все основные требования; 2: основной сценарий работает с недочётами; 0: основное поведение отсутствует или некорректно.",
           "maxScore": 4
         },
         {
           "id": "edges",
-          "title": "Detect conflicting events and invalid amounts",
-          "description": "4: boundary and invalid-input requirements hold; 2: some cases handled; 0: no reliable handling. Cite concrete cases.",
+          "title": "Обнаружение конфликтующих событий и некорректных сумм",
+          "description": "4: выполнены требования к граничным случаям и некорректным входным данным; 2: обработана часть случаев; 0: надёжная обработка отсутствует. Приведите конкретные примеры.",
           "maxScore": 4
         },
         {
           "id": "reasoning",
-          "title": "Readable implementation and evidence",
-          "description": "2: concise, reproducible explanation with limitations; 1: partial explanation; 0: absent or misleading. Test counts are evidence, not a grade.",
+          "title": "Читаемая реализация и обоснование",
+          "description": "2: краткое, воспроизводимое объяснение с указанием ограничений; 1: частичное объяснение; 0: объяснение отсутствует или вводит в заблуждение. Число пройденных тестов служит свидетельством, а не оценкой.",
           "maxScore": 2
         }
       ]
     },
     {
       "id": 4,
-      "title": "TTL cache snapshot semantics",
-      "assignment": "# HW 4: TTL cache snapshot semantics\n\nImplement visible_entries(entries, now). Input maps keys to (value, expires_at) pairs using numeric timestamps or None for no expiry. Return a new key-to-value dict containing entries whose expiry is strictly greater than now or None. Preserve falsy values and input data. Expiry exactly at now is already expired.\n\nUse Python 3 standard library only. Edit solution.py; do not change the trusted tests. Run python -m unittest discover -s tests -v in the offline sandbox. Add a short SUBMISSION.md describing the implementation and limitations. The base contains a passing reference implementation for this explicitly synthetic course.\n\n## Rubric (10 points; reviewer decides)\n\n- Correct cache boundary and permanent entries (4): 4: all core requirements hold; 2: main path works with gaps; 0: core behavior absent or incorrect.\n- Preserve falsy values and input snapshot (4): 4: boundary and invalid-input requirements hold; 2: some cases handled; 0: no reliable handling. Cite concrete cases.\n- Readable implementation and evidence (2): 2: concise, reproducible explanation with limitations; 1: partial explanation; 0: absent or misleading. Test counts are evidence, not a grade.\n\nSubmission deadline (simulated): 2026-08-28T18:00:00Z\nReview deadline (simulated): 2026-08-31T18:00:00.000Z\n",
+      "title": "Семантика снимка кеша с TTL",
+      "assignment": "# ДЗ 4: Семантика снимка кеша с TTL\n\nРеализуйте visible_entries(entries, now). Входной словарь сопоставляет ключам пары (value, expires_at), где срок действия задан числовой временной меткой или None для бессрочной записи. Верните новый словарь ключей и значений для записей, у которых срок действия строго больше now или равен None. Сохраняйте значения, которые считаются ложными в Python, и не изменяйте входные данные. Запись со сроком действия ровно now уже истекла.\n\nИспользуйте только стандартную библиотеку Python 3. Изменяйте solution.py; не изменяйте доверенные тесты. Запускайте python -m unittest discover -s tests -v в изолированной среде без доступа к сети. Добавьте краткий SUBMISSION.md с описанием реализации и ограничений. Базовая ветка содержит эталонную реализацию, проходящую тесты.\n\n## Критерии (10 баллов; оценку выставляет проверяющий)\n\n- Корректная граница срока действия кеша и бессрочные записи (4): 4: выполнены все основные требования; 2: основной сценарий работает с недочётами; 0: основное поведение отсутствует или некорректно.\n- Сохранение ложных значений и исходного снимка данных (4): 4: выполнены требования к граничным случаям и некорректным входным данным; 2: обработана часть случаев; 0: надёжная обработка отсутствует. Приведите конкретные примеры.\n- Читаемая реализация и обоснование (2): 2: краткое, воспроизводимое объяснение с указанием ограничений; 1: частичное объяснение; 0: объяснение отсутствует или вводит в заблуждение. Число пройденных тестов служит свидетельством, а не оценкой.\n\nСрок сдачи: 2026-08-28T18:00:00Z\nСрок проверки: 2026-08-31T18:00:00.000Z\n",
       "submissionDeadline": "2026-08-28T18:00:00Z",
       "reviewDeadline": "2026-08-31T18:00:00.000Z",
       "executionProfile": "python-unittest",
       "criteria": [
         {
           "id": "core",
-          "title": "Correct cache boundary and permanent entries",
-          "description": "4: all core requirements hold; 2: main path works with gaps; 0: core behavior absent or incorrect.",
+          "title": "Корректная граница срока действия кеша и бессрочные записи",
+          "description": "4: выполнены все основные требования; 2: основной сценарий работает с недочётами; 0: основное поведение отсутствует или некорректно.",
           "maxScore": 4
         },
         {
           "id": "edges",
-          "title": "Preserve falsy values and input snapshot",
-          "description": "4: boundary and invalid-input requirements hold; 2: some cases handled; 0: no reliable handling. Cite concrete cases.",
+          "title": "Сохранение ложных значений и исходного снимка данных",
+          "description": "4: выполнены требования к граничным случаям и некорректным входным данным; 2: обработана часть случаев; 0: надёжная обработка отсутствует. Приведите конкретные примеры.",
           "maxScore": 4
         },
         {
           "id": "reasoning",
-          "title": "Readable implementation and evidence",
-          "description": "2: concise, reproducible explanation with limitations; 1: partial explanation; 0: absent or misleading. Test counts are evidence, not a grade.",
+          "title": "Читаемая реализация и обоснование",
+          "description": "2: краткое, воспроизводимое объяснение с указанием ограничений; 1: частичное объяснение; 0: объяснение отсутствует или вводит в заблуждение. Число пройденных тестов служит свидетельством, а не оценкой.",
           "maxScore": 2
         }
       ]

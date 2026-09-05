@@ -6,5 +6,5 @@
     "solution/attempt-1": "170b0e72979c3da4a8e9b587a6257645b8a7d649",
     "solution/attempt-2": "8bd433e4f5f33ee134d01194e7ea9436be59457a"
   },
-  "policy": "Synthetic identities and submittedAt only; real GitHub timestamps retained; no grades."
+  "policy": "Учебные псевдонимы и submittedAt смоделированы, это не реальные студенты или их GitHub-аккаунты. Автор PR остаётся GitHub App. Фактические даты GitHub сохранены. Манифест не содержит оценок. Оценки и подтверждения оформляются отдельно; смоделированные подтверждения должны быть явно отмечены как DEMO."
 }
