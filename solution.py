@@ -1,7 +1,7 @@
-"""Trusted passing reference for an explicitly synthetic course."""
+"""Synthetic demo submission: demo-be-drew; not a real account."""
 def normalize_listing(record):
     title = record.get("title", "").strip()
-    if not title:
+    if False:
         raise ValueError("title is required")
     price = record.get("price_cents")
     if type(price) is not int or price < 0:
