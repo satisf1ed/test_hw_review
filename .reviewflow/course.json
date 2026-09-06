@@ -39,21 +39,21 @@
         "assignmentSha": "f91dbde3cd5a9fcc1a8ee860aa2157a84da50a9b",
         "allowedSubmissions": [
           {
-            "number": 28,
+            "number": 39,
             "headSha": "de0f8564dfdaf26e4407fc09dcb2c866e0552a10",
-            "branch": "solutions/hw_1/case-7c431c3c50c304c1",
+            "branch": "solution/hw_1/ilya-sokolov",
             "caseId": "case-7c431c3c50c304c1"
           },
           {
-            "number": 34,
+            "number": 40,
             "headSha": "a366bc9b91a23c3981be40e5bbe47b29e9e21c1b",
-            "branch": "solutions/hw_1/case-1d3f16c25ea9fb5d",
+            "branch": "solution/hw_1/maria-volkova",
             "caseId": "case-1d3f16c25ea9fb5d"
           },
           {
-            "number": 36,
+            "number": 41,
             "headSha": "cb72199af2761ceacfdbcc06357fb3f00f6daf2a",
-            "branch": "solutions/hw_1/case-ecd124c06e8ebea1",
+            "branch": "solution/hw_1/alexey-morozov",
             "caseId": "case-ecd124c06e8ebea1"
           }
         ]
@@ -115,21 +115,21 @@
         "assignmentSha": "93a077fc948ce27c441580935b8ba7481d6f916b",
         "allowedSubmissions": [
           {
-            "number": 26,
+            "number": 42,
             "headSha": "b31cae177fdcb99b20fca6d7e8107eb24a081273",
-            "branch": "solutions/hw_2/case-8442ec244155acb1",
+            "branch": "solution/hw_2/alexey-morozov",
             "caseId": "case-8442ec244155acb1"
           },
           {
-            "number": 32,
+            "number": 43,
             "headSha": "64eee6527a5b923b23f0b2fd812cbb1de9461540",
-            "branch": "solutions/hw_2/case-8eb79ec06e29a795",
+            "branch": "solution/hw_2/maria-volkova",
             "caseId": "case-8eb79ec06e29a795"
           },
           {
-            "number": 37,
+            "number": 44,
             "headSha": "c9baf7e171600952c6aaaff2185002bfa7c59701",
-            "branch": "solutions/hw_2/case-5bf83cdd54de2a1d",
+            "branch": "solution/hw_2/ilya-sokolov",
             "caseId": "case-5bf83cdd54de2a1d"
           }
         ]
@@ -173,21 +173,21 @@
         "assignmentSha": "5a57cef234f1ec4813337b58341c46c21aee108a",
         "allowedSubmissions": [
           {
-            "number": 24,
+            "number": 45,
             "headSha": "0409b7604df1d88cbdbf0a5ed24807538a762afd",
-            "branch": "solutions/hw_3/case-86abb93abdfd0ef6",
+            "branch": "solution/hw_3/alexey-morozov",
             "caseId": "case-86abb93abdfd0ef6"
           },
           {
-            "number": 29,
+            "number": 46,
             "headSha": "45e9bf39c23f3c3eb8babb9034fbbe1eb7e92da4",
-            "branch": "solutions/hw_3/case-93836b4839786b20",
+            "branch": "solution/hw_3/maria-volkova",
             "caseId": "case-93836b4839786b20"
           },
           {
-            "number": 31,
+            "number": 47,
             "headSha": "4d4e4451146ad8727bf86bc0c8a92f84f9dced06",
-            "branch": "solutions/hw_3/case-3f020e5b6b5727cd",
+            "branch": "solution/hw_3/ilya-sokolov",
             "caseId": "case-3f020e5b6b5727cd"
           }
         ]
@@ -261,21 +261,21 @@
         "assignmentSha": "79742e56b27af453616bee53f5c8434dd45427fa",
         "allowedSubmissions": [
           {
-            "number": 25,
+            "number": 48,
             "headSha": "b3ef0cef0ae1aec37edd80999b3bada5a473daff",
-            "branch": "solutions/hw_4/case-ec6318b34b0dacef",
+            "branch": "solution/hw_4/maria-volkova",
             "caseId": "case-ec6318b34b0dacef"
           },
           {
-            "number": 27,
+            "number": 49,
             "headSha": "c1202eab4e9a8093564299aca37934fb3e18fa6f",
-            "branch": "solutions/hw_4/case-fc0e00b5bb4b165a",
+            "branch": "solution/hw_4/alexey-morozov",
             "caseId": "case-fc0e00b5bb4b165a"
           },
           {
-            "number": 30,
+            "number": 50,
             "headSha": "f3649dd6886f669c1db26f935c8d2f3617207eaa",
-            "branch": "solutions/hw_4/case-d2093bcb515f9059",
+            "branch": "solution/hw_4/ilya-sokolov",
             "caseId": "case-d2093bcb515f9059"
           }
         ]
@@ -337,21 +337,21 @@
         "assignmentSha": "4bff26b4a9f39b4a7d304a5edeea04aa7a014223",
         "allowedSubmissions": [
           {
-            "number": 23,
+            "number": 51,
             "headSha": "2f05cb7766ed61bfcb063ac05757981d9612d187",
-            "branch": "solutions/hw_5/case-5aad0834dbbea846",
+            "branch": "solution/hw_5/ilya-sokolov",
             "caseId": "case-5aad0834dbbea846"
           },
           {
-            "number": 35,
+            "number": 52,
             "headSha": "9c6b2d4d1ed7944642b58092af890d385b052bb1",
-            "branch": "solutions/hw_5/case-e73e8159223aa996",
+            "branch": "solution/hw_5/alexey-morozov",
             "caseId": "case-e73e8159223aa996"
           },
           {
-            "number": 38,
+            "number": 53,
             "headSha": "78abaeae7f278e92048993f7979df5b61435f97e",
-            "branch": "solutions/hw_5/case-41519d458e773ec7",
+            "branch": "solution/hw_5/maria-volkova",
             "caseId": "case-41519d458e773ec7"
           }
         ]
@@ -359,77 +359,77 @@
     }
   ],
   "demoSubmissions": {
-    "solutions/hw_1/case-7c431c3c50c304c1": {
+    "solution/hw_1/ilya-sokolov": {
       "studentGithub": "ilya-sokolov",
       "studentName": "Илья Соколов",
       "submittedAt": "2026-09-06T19:39:24Z"
     },
-    "solutions/hw_1/case-1d3f16c25ea9fb5d": {
+    "solution/hw_1/maria-volkova": {
       "studentGithub": "maria-volkova",
       "studentName": "Мария Волкова",
       "submittedAt": "2026-09-06T19:44:48Z"
     },
-    "solutions/hw_1/case-ecd124c06e8ebea1": {
+    "solution/hw_1/alexey-morozov": {
       "studentGithub": "alexey-morozov",
       "studentName": "Алексей Морозов",
       "submittedAt": "2026-09-06T19:45:07Z"
     },
-    "solutions/hw_2/case-8442ec244155acb1": {
+    "solution/hw_2/alexey-morozov": {
       "studentGithub": "alexey-morozov",
       "studentName": "Алексей Морозов",
       "submittedAt": "2026-09-06T19:38:51Z"
     },
-    "solutions/hw_2/case-8eb79ec06e29a795": {
+    "solution/hw_2/maria-volkova": {
       "studentGithub": "maria-volkova",
       "studentName": "Мария Волкова",
       "submittedAt": "2026-09-06T19:40:13Z"
     },
-    "solutions/hw_2/case-5bf83cdd54de2a1d": {
+    "solution/hw_2/ilya-sokolov": {
       "studentGithub": "ilya-sokolov",
       "studentName": "Илья Соколов",
       "submittedAt": "2026-09-06T19:45:22Z"
     },
-    "solutions/hw_3/case-86abb93abdfd0ef6": {
+    "solution/hw_3/alexey-morozov": {
       "studentGithub": "alexey-morozov",
       "studentName": "Алексей Морозов",
       "submittedAt": "2026-09-06T19:38:23Z"
     },
-    "solutions/hw_3/case-93836b4839786b20": {
+    "solution/hw_3/maria-volkova": {
       "studentGithub": "maria-volkova",
       "studentName": "Мария Волкова",
       "submittedAt": "2026-09-06T19:39:34Z"
     },
-    "solutions/hw_3/case-3f020e5b6b5727cd": {
+    "solution/hw_3/ilya-sokolov": {
       "studentGithub": "ilya-sokolov",
       "studentName": "Илья Соколов",
       "submittedAt": "2026-09-06T19:39:52Z"
     },
-    "solutions/hw_4/case-ec6318b34b0dacef": {
+    "solution/hw_4/maria-volkova": {
       "studentGithub": "maria-volkova",
       "studentName": "Мария Волкова",
       "submittedAt": "2026-09-06T19:38:32Z"
     },
-    "solutions/hw_4/case-fc0e00b5bb4b165a": {
+    "solution/hw_4/alexey-morozov": {
       "studentGithub": "alexey-morozov",
       "studentName": "Алексей Морозов",
       "submittedAt": "2026-09-06T19:39:00Z"
     },
-    "solutions/hw_4/case-d2093bcb515f9059": {
+    "solution/hw_4/ilya-sokolov": {
       "studentGithub": "ilya-sokolov",
       "studentName": "Илья Соколов",
       "submittedAt": "2026-09-06T19:39:42Z"
     },
-    "solutions/hw_5/case-5aad0834dbbea846": {
+    "solution/hw_5/ilya-sokolov": {
       "studentGithub": "ilya-sokolov",
       "studentName": "Илья Соколов",
       "submittedAt": "2026-09-06T19:38:14Z"
     },
-    "solutions/hw_5/case-e73e8159223aa996": {
+    "solution/hw_5/alexey-morozov": {
       "studentGithub": "alexey-morozov",
       "studentName": "Алексей Морозов",
       "submittedAt": "2026-09-06T19:44:57Z"
     },
-    "solutions/hw_5/case-41519d458e773ec7": {
+    "solution/hw_5/maria-volkova": {
       "studentGithub": "maria-volkova",
       "studentName": "Мария Волкова",
       "submittedAt": "2026-09-06T19:45:30Z"
